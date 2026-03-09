@@ -8,13 +8,13 @@ const ContactForm = () => {
   const modalRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
 
-  // ID de sesión único generado una sola vez
-  const sessionId = useMemo(() => Math.random().toString(16).substring(2, 10).toUpperCase(), []);
+  // ID de sesión estático para evitar impurezas en el render, pero con estética tech
+  const sessionId = "KALI-ALPHA-99";
 
   // Efecto de texto glitch para el botón
   useEffect(() => {
     const texts = ['HOLA', 'ACCESS', 'LINK', 'KALI', 'VOID'];
-    let interval: any;
+    let interval: ReturnType<typeof setInterval>;
     
     if (!isOpen) {
       interval = setInterval(() => {
