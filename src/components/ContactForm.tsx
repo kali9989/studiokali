@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import gsap from 'gsap';
 import { X, Send, Cpu, Terminal, ShieldAlert } from 'lucide-react';
 
@@ -8,10 +8,13 @@ const ContactForm = () => {
   const modalRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
 
+  // ID de sesión único generado una sola vez
+  const sessionId = useMemo(() => Math.random().toString(16).substring(2, 10).toUpperCase(), []);
+
   // Efecto de texto glitch para el botón
   useEffect(() => {
     const texts = ['HOLA', 'ACCESS', 'LINK', 'KALI', 'VOID'];
-    let interval: NodeJS.Timeout;
+    let interval: any;
     
     if (!isOpen) {
       interval = setInterval(() => {
@@ -147,7 +150,7 @@ const ContactForm = () => {
 
             {/* Background elements */}
             <div className="absolute bottom-4 right-4 opacity-10 font-jetbrains text-[8px] leading-tight select-none">
-              TRNSM_ID: {Math.random().toString(16).substring(2, 10).toUpperCase()}<br />
+              TRNSM_ID: {sessionId}<br />
               STTUS: LISTO_PARA_TRANSMUTAR<br />
               LOC: 40.4168° N, 3.7038° W
             </div>
@@ -157,7 +160,5 @@ const ContactForm = () => {
     </>
   );
 };
-
-export default ContactForm;
 
 export default ContactForm;
