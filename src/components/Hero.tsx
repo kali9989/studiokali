@@ -181,7 +181,7 @@ export default function Hero() {
                         <span className="text-electric-cyan font-medium drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]">Diseño que domina el ruido.</span>
                     </p>
                     
-                    <a href="#contacto" className="px-12 py-5 bg-transparent border border-hot-pink/50 text-paper font-bebas text-2xl tracking-[0.2em] rounded-full hover:bg-hot-pink hover:border-hot-pink hover:text-white transition-all duration-500 shadow-[0_0_15px_rgba(255,45,120,0.2)] hover:shadow-[0_0_50px_rgba(255,45,120,0.6)] backdrop-blur-md">
+                    <a href="#contacto" className="btn-glass btn-neon-border px-14 py-5 text-paper font-bebas text-2xl tracking-[0.2em] rounded-full hover:scale-105 active:scale-95 transition-transform duration-300">
                         INICIAR CONEXIÓN
                     </a>
                 </div>

@@ -1,15 +1,13 @@
 import { useState, useRef } from 'react';
 import gsap from 'gsap';
-import { X, Send, Cpu, Terminal, ShieldAlert } from 'lucide-react';
+import { X, Send, Terminal, ShieldAlert, Sparkles } from 'lucide-react';
 
 const ContactForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
 
-  // ID de sesión estático para evitar impurezas en el render, pero con estética tech
   const sessionId = "KALI-ALPHA-99";
-
 
   const toggleModal = () => {
     if (!isOpen) {
@@ -29,39 +27,29 @@ const ContactForm = () => {
 
   return (
     <>
-      {/* Divine Interface Button */}
+      {/* Floating Contact Button — Circular Orbital Design */}
       <div className="fixed bottom-10 right-10 z-100">
         <button
           onClick={toggleModal}
-          className="relative w-24 h-24 bg-noir border-2 border-hot-pink overflow-hidden group interactive shadow-[0_0_40px_rgba(255,45,120,0.3)] hover:shadow-[0_0_60px_rgba(255,45,120,0.6)] transition-all duration-500 clip-path-polygon"
-          style={{ clipPath: 'polygon(20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 20%)' }}
+          className="relative w-20 h-20 rounded-full btn-glass border-hot-pink/40 group interactive shadow-[0_0_30px_rgba(255,45,120,0.2)] hover:shadow-[0_0_50px_rgba(255,45,120,0.5)] transition-all duration-500"
         >
-          {/* Scanning Line */}
-          <div className="animate-scanning opacity-30"></div>
-          
-          {/* Background Grid */}
-          <div className="absolute inset-0 hexagon-bg opacity-20 group-hover:opacity-40 transition-opacity"></div>
+          {/* Orbital Ring */}
+          <div className="absolute -inset-3 rounded-full border border-hot-pink/20 animate-[spin_8s_linear_infinite] group-hover:border-hot-pink/50 transition-colors">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-hot-pink shadow-[0_0_10px_rgba(255,45,120,0.8)]" />
+          </div>
           
           {/* Inner Content */}
-          <div className="relative z-10 flex flex-col items-center justify-center h-full gap-1">
-            <Cpu className="w-6 h-6 text-hot-pink group-hover:text-electric-cyan transition-colors" />
-            <span className="font-bebas text-2xl font-bold tracking-[0.2em] text-white">CONTACTO</span>
+          <div className="relative z-10 flex flex-col items-center justify-center h-full gap-0.5">
+            <Sparkles className="w-5 h-5 text-hot-pink group-hover:text-electric-cyan transition-colors duration-300" />
+            <span className="font-bebas text-xs font-bold tracking-[0.15em] text-white/90">CONTACTO</span>
           </div>
 
-          {/* Corner accents */}
-          <div className="absolute top-0 left-0 w-2 h-2 bg-hot-pink"></div>
-          <div className="absolute bottom-0 right-0 w-2 h-2 bg-hot-pink"></div>
-          
-          {/* Hover Glow */}
-          <div className="absolute inset-0 bg-hot-pink/10 opacity-0 group-hover:opacity-100 transition-opacity blur-md"></div>
+          {/* Inner glow pulse */}
+          <div className="absolute inset-0 rounded-full bg-hot-pink/5 animate-pulse" />
         </button>
-
-        {/* Decorative Lines around the button */}
-        <div className="absolute -inset-4 border border-dashed border-hot-pink/20 rounded-full animate-[spin_10s_linear_infinite] pointer-events-none"></div>
-        <div className="absolute -inset-8 border border-dotted border-electric-cyan/10 rounded-full animate-[spin_20s_linear_reverse_infinite] pointer-events-none"></div>
       </div>
 
-      {/* Modal Overlay Elitista */}
+      {/* Modal Overlay */}
       {isOpen && (
         <div
           ref={overlayRef}
@@ -72,73 +60,70 @@ const ContactForm = () => {
 
           <div
             ref={modalRef}
-            className="w-full max-w-2xl bg-charcoal border-2 border-hot-pink/40 p-12 relative overflow-hidden shadow-[0_0_100px_rgba(255,45,120,0.2)]"
-            style={{ clipPath: 'polygon(5% 0%, 100% 0%, 100% 95%, 95% 100%, 0% 100%, 0% 5%)' }}
+            className="w-full max-w-2xl bg-charcoal/80 backdrop-blur-xl border border-hot-pink/30 p-12 relative overflow-hidden shadow-[0_0_80px_rgba(255,45,120,0.15)] rounded-3xl"
           >
             {/* Terminal Header */}
-            <div className="absolute top-0 left-0 w-full bg-hot-pink/10 border-b border-hot-pink/20 px-6 py-2 flex justify-between items-center">
+            <div className="absolute top-0 left-0 w-full bg-hot-pink/5 border-b border-hot-pink/10 px-6 py-2.5 flex justify-between items-center rounded-t-3xl">
               <div className="flex items-center gap-2">
                 <Terminal size={14} className="text-hot-pink" />
-                <span className="font-jetbrains text-[10px] tracking-widest text-hot-pink/70 uppercase">Kali_Neural_Interface_v2.0</span>
+                <span className="font-jetbrains text-[10px] tracking-widest text-hot-pink/60 uppercase">Kali_Interface_v2.0</span>
               </div>
               <div className="flex gap-2">
-                <div className="w-2 h-2 rounded-full bg-hot-pink/30"></div>
-                <div className="w-2 h-2 rounded-full bg-hot-pink/50"></div>
-                <div className="w-2 h-2 rounded-full bg-hot-pink animate-pulse"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500/60 hover:bg-red-500 transition-colors cursor-pointer" onClick={toggleModal} />
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/40" />
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500/40" />
               </div>
             </div>
 
             <button
               onClick={toggleModal}
-              className="absolute top-12 right-12 text-hot-pink/40 hover:text-hot-pink hover:rotate-90 transition-all duration-300 z-20"
+              className="absolute top-14 right-12 text-hot-pink/30 hover:text-hot-pink hover:rotate-90 transition-all duration-300 z-20"
             >
-              <X size={28} />
+              <X size={24} />
             </button>
 
-            <div className="relative z-10 mt-6">
+            <div className="relative z-10 mt-8">
               <div className="flex items-center gap-3 mb-6">
-                <ShieldAlert className="text-hot-pink animate-pulse" size={40} />
-                <h2 className="font-bebas text-6xl text-white tracking-tight">AREA <span className="text-hot-pink italic underline decoration-electric-cyan/50">CONTACTO</span></h2>
+                <ShieldAlert className="text-hot-pink animate-pulse" size={36} />
+                <h2 className="font-bebas text-5xl md:text-6xl text-white tracking-tight">AREA <span className="text-hot-pink italic">CONTACTO</span></h2>
               </div>
               
-              <p className="font-jetbrains text-sm text-paper/50 mb-12 max-w-md border-l-2 border-hot-pink pl-4">
+              <p className="font-jetbrains text-sm text-paper/40 mb-10 max-w-md border-l-2 border-hot-pink/30 pl-4">
                 [SISTEMA]: Cuéntanos tu proyecto. Recibirás una respuesta profesional en menos de 24 horas.
               </p>
 
               <form 
                 action="https://formspree.io/f/xyknkvkk" 
                 method="POST"
-                className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                className="grid grid-cols-1 md:grid-cols-2 gap-6"
               >
                 <input type="hidden" name="_subject" value="Nuevo Mensaje de Studio Kali" />
-                <div className="space-y-3">
-                  <label className="font-jetbrains text-[10px] uppercase tracking-tighter text-electric-cyan/70">TU_NOMBRE</label>
-                  <input type="text" name="name" required className="w-full bg-noir border-b-2 border-hot-pink/20 p-4 text-paper focus:border-hot-pink outline-none transition-all placeholder:text-paper/10 font-jetbrains text-sm" placeholder="NOMBRE COMPLETO" />
+                <div className="space-y-2">
+                  <label className="font-jetbrains text-[10px] uppercase tracking-wider text-electric-cyan/60">TU_NOMBRE</label>
+                  <input type="text" name="name" required className="w-full bg-noir/50 border border-white/10 rounded-xl p-4 text-paper focus:border-hot-pink/50 focus:bg-noir/80 outline-none transition-all placeholder:text-paper/15 font-jetbrains text-sm" placeholder="NOMBRE COMPLETO" />
                 </div>
-                <div className="space-y-3">
-                  <label className="font-jetbrains text-[10px] uppercase tracking-tighter text-electric-cyan/70">TU_EMAIL</label>
-                  <input type="email" name="email" required className="w-full bg-noir border-b-2 border-hot-pink/20 p-4 text-paper focus:border-hot-pink outline-none transition-all placeholder:text-paper/10 font-jetbrains text-sm" placeholder="EMAIL DE CONTACTO" />
+                <div className="space-y-2">
+                  <label className="font-jetbrains text-[10px] uppercase tracking-wider text-electric-cyan/60">TU_EMAIL</label>
+                  <input type="email" name="email" required className="w-full bg-noir/50 border border-white/10 rounded-xl p-4 text-paper focus:border-hot-pink/50 focus:bg-noir/80 outline-none transition-all placeholder:text-paper/15 font-jetbrains text-sm" placeholder="EMAIL DE CONTACTO" />
                 </div>
-                <div className="md:col-span-2 space-y-3">
-                  <label className="font-jetbrains text-[10px] uppercase tracking-tighter text-electric-cyan/70">MENSAJE</label>
-                  <textarea name="message" rows={4} className="w-full bg-noir border-l-2 border-hot-pink/20 p-6 text-paper focus:border-hot-pink outline-none transition-all resize-none placeholder:text-paper/10 font-jetbrains text-sm" placeholder="¿EN QUÉ PODEMOS AYUDARTE?"></textarea>
+                <div className="md:col-span-2 space-y-2">
+                  <label className="font-jetbrains text-[10px] uppercase tracking-wider text-electric-cyan/60">MENSAJE</label>
+                  <textarea name="message" rows={4} className="w-full bg-noir/50 border border-white/10 rounded-xl p-5 text-paper focus:border-hot-pink/50 focus:bg-noir/80 outline-none transition-all resize-none placeholder:text-paper/15 font-jetbrains text-sm" placeholder="¿EN QUÉ PODEMOS AYUDARTE?"></textarea>
                 </div>
 
-                <button className="md:col-span-2 group/btn relative overflow-hidden py-6 bg-hot-pink text-white font-bebas text-3xl tracking-[0.3em] transition-all hover:scale-[1.02] active:scale-95 shadow-[0_10px_30px_rgba(255,45,120,0.4)]">
+                <button type="submit" className="md:col-span-2 btn-glass btn-neon-border group/btn rounded-2xl py-5 font-bebas text-2xl tracking-[0.3em] text-white hover:scale-[1.02] active:scale-95 transition-transform">
                   <span className="relative z-10 flex items-center justify-center gap-4">
-                    CONTACTO
-                    <Send size={24} className="group-hover/btn:translate-x-2 group-hover/btn:-translate-y-2 transition-transform" />
+                    ENVIAR MENSAJE
+                    <Send size={20} className="group-hover/btn:translate-x-2 group-hover/btn:-translate-y-1 transition-transform" />
                   </span>
-                  {/* Button Background Animation */}
-                  <div className="absolute inset-0 bg-white/10 -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-500 skew-x-12"></div>
                 </button>
               </form>
             </div>
 
-            {/* Background elements */}
+            {/* Background data */}
             <div className="absolute bottom-4 right-4 opacity-10 font-jetbrains text-[8px] leading-tight select-none">
               TRNSM_ID: {sessionId}<br />
-              STTUS: LISTO_PARA_TRANSMUTAR<br />
+              STTUS: ACTIVO<br />
               LOC: 40.4168° N, 3.7038° W
             </div>
           </div>

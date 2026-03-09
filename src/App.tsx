@@ -11,6 +11,8 @@ import ContactForm from './components/ContactForm';
 import Work from './components/Work';
 import FloatingContact from './components/FloatingContact';
 import ScrollProgress from './components/ScrollProgress';
+import VHSOverlay from './components/VHSOverlay';
+import SocialCounters from './components/SocialCounters';
 
 // Lazy load non-critical sections
 const Pricing = lazy(() => import('./components/Pricing'));
@@ -23,6 +25,7 @@ function App() {
     <div className="relative min-h-screen selection:bg-hot-pink selection:text-white bg-noir">
       <ScrollProgress />
       <CustomCursor />
+      <VHSOverlay />
       <FloatingContact />
       <ContactForm />
       
@@ -39,6 +42,7 @@ function App() {
         <Hero />
         <Services />
         <Work />
+        <SocialCounters />
         <Manifesto />
         <Suspense fallback={<div className="h-96 bg-noir flex items-center justify-center font-bebas text-hot-pink animate-pulse text-2xl">CARGANDO MÓDULO...</div>}>
           <Pricing />

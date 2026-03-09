@@ -224,3 +224,164 @@ button {
 .hexagon-bg {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cpath fill='%23ff2d78' fill-opacity='0.1' d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.91v12.18l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.91z'/%3E%3C/svg%3E");
 }
+
+/* ═══════════════════════════════════════════
+   VHS OVERLAY SYSTEM — God Supreme Level
+   ═══════════════════════════════════════════ */
+
+/* Horizontal Scanlines */
+.vhs-scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9000;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  animation: vhs-scroll 0.4s linear infinite;
+}
+
+@keyframes vhs-scroll {
+  0% { background-position-y: 0; }
+  100% { background-position-y: 4px; }
+}
+
+/* Noise Grain — Animated */
+.vhs-noise {
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 8999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  animation: vhs-noise-move 0.2s steps(3) infinite;
+}
+
+@keyframes vhs-noise-move {
+  0% { transform: translate(0, 0); }
+  33% { transform: translate(-5%, -5%); }
+  66% { transform: translate(3%, 2%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* VHS Tracking Band Glitch */
+.vhs-tracking-band {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  z-index: 9002;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.08) 20%,
+    rgba(0, 229, 255, 0.1) 50%,
+    rgba(255, 45, 120, 0.08) 80%,
+    transparent
+  );
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  animation: tracking-slide 0.6s ease-out forwards;
+}
+
+@keyframes tracking-slide {
+  0% { top: -20px; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: calc(100vh + 20px); opacity: 0; }
+}
+
+/* Glassmorphism Button System */
+.btn-glass {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 45, 120, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-glass:hover {
+  background: rgba(255, 45, 120, 0.15);
+  border-color: rgba(255, 45, 120, 0.6);
+  box-shadow:
+    0 0 20px rgba(255, 45, 120, 0.3),
+    inset 0 0 20px rgba(255, 45, 120, 0.05);
+}
+
+.btn-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.btn-glass:hover::before {
+  left: 100%;
+}
+
+/* Animated gradient border */
+.btn-neon-border {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-neon-border::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(270deg, #ff2d78, #00e5ff, #ff2d78, #00e5ff);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradient-spin 4s ease infinite;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.btn-neon-border:hover::after {
+  opacity: 1;
+}
+
+@keyframes gradient-spin {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Nav link animated underline */
+.nav-link-animated {
+  position: relative;
+}
+
+.nav-link-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #ff2d78, #00e5ff);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 45, 120, 0.5);
+}
+
+.nav-link-animated:hover::after {
+  width: 100%;
+}
