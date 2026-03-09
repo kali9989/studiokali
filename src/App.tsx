@@ -9,6 +9,8 @@ import ThreadLine from './components/ThreadLine';
 import CustomCursor from './components/CustomCursor';
 import ContactForm from './components/ContactForm';
 import Work from './components/Work';
+import FloatingContact from './components/FloatingContact';
+import ScrollProgress from './components/ScrollProgress';
 
 // Lazy load non-critical sections
 const Pricing = lazy(() => import('./components/Pricing'));
@@ -19,7 +21,9 @@ const Footer = lazy(() => import('./components/Footer'));
 function App() {
   return (
     <div className="relative min-h-screen selection:bg-hot-pink selection:text-white bg-noir">
+      <ScrollProgress />
       <CustomCursor />
+      <FloatingContact />
       <ContactForm />
       
       {/* Global Halftone Overlay */}
