@@ -28,7 +28,7 @@ export default function VHSOverlay() {
     }, []);
 
     return (
-        <div className="fixed inset-0 pointer-events-none z-[9000]" aria-hidden="true">
+        <div className="fixed inset-0 pointer-events-none z-9000" aria-hidden="true">
             {/* Scanlines */}
             <div className="vhs-scanlines" />
 
@@ -41,7 +41,7 @@ export default function VHSOverlay() {
             )}
 
             {/* VHS Timestamp */}
-            <div className="fixed top-6 left-6 z-[9001] flex items-center gap-3 pointer-events-none select-none">
+            <div className="fixed top-6 left-6 z-9001 flex items-center gap-3 pointer-events-none select-none">
                 <div className="flex items-center gap-1.5">
                     <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
                     <span className="font-jetbrains text-[10px] text-red-500/80 uppercase tracking-[0.3em] font-bold">REC</span>
@@ -52,7 +52,7 @@ export default function VHSOverlay() {
             </div>
 
             {/* Bottom-right VHS badge */}
-            <div className="fixed bottom-6 left-6 z-[9001] pointer-events-none select-none">
+            <div className="fixed bottom-6 left-6 z-9001 pointer-events-none select-none">
                 <span className="font-jetbrains text-[9px] text-white/20 tracking-[0.4em] uppercase">
                     PLAY ▶ SP
                 </span>

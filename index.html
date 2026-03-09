@@ -2,11 +2,12 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://studiokali.es/" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="Studio Kali" />
+    <meta name="generator" content="Vite + React" />
 
     <title>Studio Kali | Diseño Digital de Vanguardia | Branding & Web</title>
     <meta
@@ -15,13 +16,14 @@
     />
     <meta
       name="keywords"
-      content="branding express, diseño web, studio kali, radiokalifa, precios económicos, identidad visual, redes sociales"
+      content="branding express, diseño web, studio kali, radiokalifa, precios económicos, identidad visual, redes sociales, diseño gráfico, agencia digital"
     />
     <meta name="theme-color" content="#0a0a0a" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://studio-kali.vercel.app/" />
+    <meta property="og:url" content="https://studiokali.es/" />
+    <meta property="og:site_name" content="Studio Kali" />
     <meta
       property="og:title"
       content="Studio Kali | Diseño Digital de Vanguardia"
@@ -32,8 +34,11 @@
     />
     <meta
       property="og:image"
-      content="https://studio-kali.vercel.app/hero_branded_visual_1772218202068.png"
+      content="https://studiokali.es/hero_branded_visual_1772218202068.png"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_ES" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -49,10 +54,10 @@
     />
     <meta
       name="twitter:image"
-      content="https://studio-kali.vercel.app/hero_branded_visual_1772218202068.png"
+      content="https://studiokali.es/hero_branded_visual_1772218202068.png"
     />
 
-    <!-- Schema.org JSON-LD -->
+    <!-- Schema.org JSON-LD — Organization -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -69,7 +74,61 @@
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "cristianrafaelfdz@gmail.com",
-          "contactType": "customer service"
+          "contactType": "customer service",
+          "availableLanguage": ["Spanish", "English"]
+        }
+      }
+    </script>
+
+    <!-- Schema.org JSON-LD — WebSite (for sitelinks search box) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Studio Kali",
+        "url": "https://studiokali.es",
+        "description": "Agencia de diseño digital de vanguardia"
+      }
+    </script>
+
+    <!-- Schema.org JSON-LD — Service -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Diseño Web y Branding",
+        "provider": {
+          "@type": "Organization",
+          "name": "Studio Kali",
+          "url": "https://studiokali.es"
+        },
+        "areaServed": "ES",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Diseño",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Branding Express"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Diseño Web Premium"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Gestión de Redes Sociales"
+              }
+            }
+          ]
         }
       }
     </script>
@@ -82,6 +141,14 @@
     />
   </head>
   <body>
+    <!-- Noscript fallback for SEO and accessibility -->
+    <noscript>
+      <div style="padding: 2em; text-align: center; background: #0a0a0a; color: #f0ede5;">
+        <h1>Studio Kali — Diseño Digital de Vanguardia</h1>
+        <p>Para la mejor experiencia, activa JavaScript en tu navegador.</p>
+        <p>Contacto: <a href="mailto:cristianrafaelfdz@gmail.com" style="color:#ff2d78;">cristianrafaelfdz@gmail.com</a></p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
