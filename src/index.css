@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  --color-noir: #0d0d0d;
+  --color-hot-pink: #ff2d78;
+  --color-electric-cyan: #00e5ff;
+  --color-paper: #f0ede5;
+  --color-charcoal: #1a1a1a;
+
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-noir text-paper font-jakarta overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Smooth focus styles for accessibility */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-electric-cyan);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Better selection colors */
+  ::selection {
+    background: var(--color-hot-pink);
+    color: white;
+  }
+}
+
+.halftone-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.04;
+  background-image: radial-gradient(
+    circle at center,
+    #ffffff 1px,
+    transparent 1px
+  );
+  background-size: 6px 6px;
+}
+
+@layer utilities {
+  .text-reveal-wrapper {
+    overflow: hidden;
+  }
+
+  .text-reveal {
+    display: inline-block;
+  }
+}
+
+/* Custom Cursor Styles */
+#custom-cursor {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-hot-pink);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+#custom-cursor-follower {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-hot-pink);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.15s ease-out;
+}
+
+/* Magnetic Interaction */
+.magnetic {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Hide default cursor on desktop */
+@media (min-width: 1024px) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  .interactive {
+    cursor: none;
+  }
+}
+
+/* Smooth page transitions for all interactive elements */
+a,
+button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar for Noir aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-noir);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-charcoal);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-hot-pink);
+}
+
+/* Synthwave Animated Grid Background */
+.synthwave-grid {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  bottom: -50%;
+  left: -50%;
+  background-image: 
+    linear-gradient(rgba(255, 45, 120, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.3) 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: perspective(600px) rotateX(60deg);
+  transform-origin: top;
+  animation: grid-move 4s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes grid-move {
+  0% { transform: perspective(600px) rotateX(60deg) translateY(0); }
+  100% { transform: perspective(600px) rotateX(60deg) translateY(50px); }
+}
+
+.grid-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, var(--color-noir) 0%, transparent 60%, var(--color-noir) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
