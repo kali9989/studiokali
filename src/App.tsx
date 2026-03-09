@@ -12,6 +12,8 @@ import Work from './components/Work';
 import FloatingContact from './components/FloatingContact';
 import ScrollProgress from './components/ScrollProgress';
 import VHSOverlay from './components/VHSOverlay';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 // Lazy load non-critical sections
 const Pricing = lazy(() => import('./components/Pricing'));
@@ -49,6 +51,8 @@ function App() {
           <Footer />
         </Suspense>
       </main>
+      <Analytics />
+      <SpeedInsights />
     </div>
   )
 }
