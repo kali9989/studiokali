@@ -4,30 +4,12 @@ import { X, Send, Cpu, Terminal, ShieldAlert } from 'lucide-react';
 
 const ContactForm = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [glitchText, setGlitchText] = useState('HOLA');
   const modalRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
 
   // ID de sesión estático para evitar impurezas en el render, pero con estética tech
   const sessionId = "KALI-ALPHA-99";
 
-  // Efecto de texto glitch para el botón
-  useEffect(() => {
-    const texts = ['HOLA', 'ACCESS', 'LINK', 'KALI', 'VOID'];
-    let interval: ReturnType<typeof setInterval>;
-    
-    if (!isOpen) {
-      interval = setInterval(() => {
-        if (Math.random() > 0.8) {
-          const randomText = texts[Math.floor(Math.random() * texts.length)];
-          setGlitchText(randomText);
-          setTimeout(() => setGlitchText('HOLA'), 100);
-        }
-      }, 2000);
-    }
-    
-    return () => clearInterval(interval);
-  }, [isOpen]);
 
   const toggleModal = () => {
     if (!isOpen) {
