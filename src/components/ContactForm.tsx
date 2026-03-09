@@ -106,7 +106,7 @@ const ContactForm = () => {
               </p>
 
               <form 
-                action="https://formspree.io/f/xvgzlowz" 
+                action="https://formspree.io/f/xyknkvkk" 
                 method="POST"
                 className="grid grid-cols-1 md:grid-cols-2 gap-8"
               >
