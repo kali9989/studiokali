@@ -74,15 +74,15 @@ export default function Process() {
         <section id="como-trabajamos" ref={container} className="relative z-20 bg-noir">
 
             {/* Step 1: Cuéntanos */}
-            <div className="process-card h-screen w-full flex items-center justify-center p-8 bg-noir border-b border-charcoal/30 sticky top-0 left-0">
-                <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div className="text-electric-cyan font-jetbrains text-lg mb-2">Paso 01</div>
-                        <h2 className="font-bebas text-5xl md:text-7xl text-paper mb-4 uppercase">Cuéntanos <span className="text-hot-pink">Qué Necesitas</span></h2>
-                        <p className="font-jakarta text-xl text-paper/70">Rellenas un formulario rápido. Sin reuniones largas ni idas y venidas. En 5 minutos sabemos lo que necesitas y nos ponemos a trabajar.</p>
+            <div className="process-card h-screen w-full flex items-center justify-center p-6 md:p-8 bg-noir border-b border-charcoal/30 sticky top-0 left-0">
+                <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div className="order-1">
+                        <div className="text-electric-cyan font-jetbrains text-base md:text-lg mb-2">Paso 01</div>
+                        <h2 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-paper mb-3 md:mb-4 uppercase">Cuéntanos <span className="text-hot-pink">Qué Necesitas</span></h2>
+                        <p className="font-jakarta text-base md:text-xl text-paper/70">Rellenas un formulario rápido. Sin reuniones largas ni idas y venidas. En 5 minutos sabemos lo que necesitas y nos ponemos a trabajar.</p>
                     </div>
 
-                    <div className="bg-[#141414] border border-charcoal rounded-4xl p-8 shadow-2xl relative overflow-hidden">
+                    <div className="bg-[#141414] border border-charcoal rounded-3xl md:rounded-4xl p-6 md:p-8 shadow-2xl relative overflow-hidden order-2">
                         <div className="absolute top-0 left-0 w-full h-1 bg-electric-cyan"></div>
                         <div className="space-y-6">
                             <div>
@@ -110,10 +110,10 @@ export default function Process() {
             </div>
 
             {/* Step 2: Nos ponemos a crear */}
-            <div className="process-card h-screen w-full flex items-center justify-center p-8 bg-[#111] border-b border-charcoal/30 sticky top-0 left-0">
-                <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="process-card h-screen w-full flex items-center justify-center p-6 md:p-8 bg-[#111] border-b border-charcoal/30 sticky top-0 left-0">
+                <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
 
-                    <div className="bg-noir border border-charcoal rounded-4xl p-8 shadow-[8px_8px_0px_#1A1A1A] relative">
+                    <div className="bg-noir border border-charcoal rounded-3xl md:rounded-4xl p-6 md:p-8 shadow-[8px_8px_0px_#1A1A1A] relative order-2 md:order-1">
                         <h3 className="font-jetbrains text-xs text-paper/50 mb-6 uppercase tracking-widest">Así trabajamos</h3>
                         <div className="space-y-8 relative before:absolute before:inset-y-0 before:left-3 before:w-0.5 before:bg-charcoal">
 
@@ -144,10 +144,10 @@ export default function Process() {
                         </div>
                     </div>
 
-                    <div>
-                        <div className="text-electric-cyan font-jetbrains text-lg mb-2">Paso 02</div>
-                        <h2 className="font-bebas text-5xl md:text-7xl text-paper mb-4 uppercase">Nos Ponemos <span className="text-hot-pink">a Crear</span></h2>
-                        <p className="font-jakarta text-xl text-paper/70">Trabajamos a puerta cerrada. Tú no tienes que hacer nada. Te enseñamos el resultado cuando esté listo para brillar.</p>
+                    <div className="order-1 md:order-2">
+                        <div className="text-electric-cyan font-jetbrains text-base md:text-lg mb-2">Paso 02</div>
+                        <h2 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-paper mb-3 md:mb-4 uppercase">Nos Ponemos <span className="text-hot-pink">a Crear</span></h2>
+                        <p className="font-jakarta text-base md:text-xl text-paper/70">Trabajamos a puerta cerrada. Tú no tienes que hacer nada. Te enseñamos el resultado cuando esté listo para brillar.</p>
                     </div>
                 </div>
             </div>
@@ -159,8 +159,8 @@ export default function Process() {
 
                 <div className="max-w-4xl w-full flex flex-col items-center text-center relative z-10">
                     <div className="text-electric-cyan font-jetbrains text-lg mb-2 drop-shadow-[0_0_5px_rgba(0,229,255,0.8)]">Paso 03</div>
-                    <h2 className="font-bebas text-5xl md:text-8xl text-paper mb-4 uppercase drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">Te Lo <span className="text-electric-cyan" style={{ textShadow: '0 0 20px rgba(0,229,255,0.6)' }}>Entregamos</span></h2>
-                    <p className="font-jakarta text-xl text-paper/70 max-w-2xl mx-auto mb-16">
+                    <h2 className="font-bebas text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-paper mb-4 uppercase drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">Te Lo <span className="text-electric-cyan" style={{ textShadow: '0 0 20px rgba(0,229,255,0.6)' }}>Entregamos</span></h2>
+                    <p className="font-jakarta text-base md:text-xl text-paper/70 max-w-2xl mx-auto mb-10 md:mb-16">
                         Todo listo y funcionando. Tu negocio ya tiene una presencia digital que impone respeto. Solo queda que tus clientes te encuentren.
                     </p>
 

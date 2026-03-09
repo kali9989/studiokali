@@ -124,7 +124,7 @@ export default function Hero() {
         <section
             ref={container}
             // Absolute Center Composition with massive safety padding to prevent clipping
-            className="relative min-h-dvh w-full flex flex-col items-center justify-center py-32 px-4 md:px-16 overflow-hidden perspective-1000"
+            className="relative min-h-dvh w-full flex flex-col items-center justify-center py-24 md:py-32 px-4 md:px-16 overflow-hidden perspective-1000"
         >
             {/* Background Image & Synthwave Gradients */}
             <div
@@ -157,14 +157,14 @@ export default function Hero() {
                         <div className="glitch-bar absolute top-[65%] -left-10 w-[120vw] h-12 bg-white/5 backdrop-blur-[1px] rotate-1"></div>
                     </div>
 
-                    <h1 className="relative z-10 font-bebas text-[5rem] sm:text-[8rem] md:text-[11rem] lg:text-[14rem] text-paper m-0 p-0 overflow-visible py-4 leading-[0.85]">
+                    <h1 className="relative z-10 font-bebas text-[4rem] xs:text-[5rem] sm:text-[8rem] md:text-[11rem] lg:text-[14rem] text-paper m-0 p-0 overflow-visible py-4 leading-[0.85]">
                         <span className="block drop-shadow-[0_0_20px_rgba(240,237,229,0.3)]">
                             {splitText('STUDIO', 'char-studio')}
                         </span>
                         <span
                             className="block text-transparent"
                             style={{
-                                WebkitTextStroke: '2px var(--color-hot-pink)',
+                                WebkitTextStroke: 'clamp(1px, 0.3vw, 2px) var(--color-hot-pink)',
                                 filter: 'drop-shadow(0 0 25px rgba(255,45,120,0.6))',
                                 textShadow: '0 0 10px rgba(255,45,120,0.2)'
                             }}
@@ -176,12 +176,12 @@ export default function Hero() {
 
                 {/* Subtitle & CTA */}
                 <div className="hero-element relative z-20 mt-12 flex flex-col items-center gap-8">
-                    <p className="font-jakarta text-lg md:text-2xl text-paper/80 font-light tracking-widest max-w-2xl px-4">
+                    <p className="font-jakarta text-base sm:text-lg md:text-2xl text-paper/80 font-light tracking-widest max-w-2xl px-4">
                         Transmutamos ideas en impacto visual. <br className="hidden md:block"/>
                         <span className="text-electric-cyan font-medium drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]">Diseño que domina el ruido.</span>
                     </p>
                     
-                    <a href="#contacto" className="btn-glass btn-neon-border px-14 py-5 text-paper font-bebas text-2xl tracking-[0.2em] rounded-full hover:scale-105 active:scale-95 transition-transform duration-300">
+                    <a href="#contacto" className="btn-glass btn-neon-border px-8 sm:px-14 py-4 sm:py-5 text-paper font-bebas text-xl sm:text-2xl tracking-[0.2em] rounded-full hover:scale-105 active:scale-95 transition-transform duration-300">
                         INICIAR CONEXIÓN
                     </a>
                 </div>

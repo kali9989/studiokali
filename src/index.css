@@ -248,8 +248,12 @@ button {
 }
 
 @keyframes vhs-scroll {
-  0% { transform: translateY(0) translateZ(0); }
-  100% { transform: translateY(4px) translateZ(0); }
+  0% {
+    transform: translateY(0) translateZ(0);
+  }
+  100% {
+    transform: translateY(4px) translateZ(0);
+  }
 }
 
 /* Noise Grain — Lightweight */
@@ -266,9 +270,15 @@ button {
 }
 
 @keyframes vhs-noise-move {
-  0% { transform: translate(0, 0) translateZ(0); }
-  50% { transform: translate(-3%, -3%) translateZ(0); }
-  100% { transform: translate(0, 0) translateZ(0); }
+  0% {
+    transform: translate(0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate(-3%, -3%) translateZ(0);
+  }
+  100% {
+    transform: translate(0, 0) translateZ(0);
+  }
 }
 
 /* VHS Tracking Band Glitch — GPU transform */
@@ -293,10 +303,20 @@ button {
 }
 
 @keyframes tracking-slide {
-  0% { transform: translateY(0) translateZ(0); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { transform: translateY(calc(100vh + 40px)) translateZ(0); opacity: 0; }
+  0% {
+    transform: translateY(0) translateZ(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(calc(100vh + 40px)) translateZ(0);
+    opacity: 0;
+  }
 }
 
 /* Glassmorphism Button System */
@@ -319,7 +339,7 @@ button {
 }
 
 .btn-glass::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -345,7 +365,7 @@ button {
 }
 
 .btn-neon-border::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: -2px;
   border-radius: inherit;
@@ -362,9 +382,15 @@ button {
 }
 
 @keyframes gradient-spin {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Nav link animated underline */
@@ -373,7 +399,7 @@ button {
 }
 
 .nav-link-animated::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -386,4 +412,29 @@ button {
 
 .nav-link-animated:hover::after {
   width: 100%;
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE & SAFE AREA OVERRIDES
+   ═══════════════════════════════════════════ */
+
+/* Prevent any element from exceeding viewport width */
+* {
+  min-width: 0;
+}
+
+/* iOS safe-area support for floating button */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .fixed.bottom-5 {
+    bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  }
+  .fixed.bottom-10 {
+    bottom: calc(2.5rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* Prevent tap highlight on mobile interactive elements */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
