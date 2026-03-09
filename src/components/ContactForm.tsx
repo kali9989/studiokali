@@ -63,7 +63,7 @@ const ContactForm = () => {
           {/* Inner Content */}
           <div className="relative z-10 flex flex-col items-center justify-center h-full gap-1">
             <Cpu className="w-6 h-6 text-hot-pink group-hover:text-electric-cyan transition-colors" />
-            <span className="font-jetbrains text-xs font-bold tracking-[0.2em] glitch-text">{glitchText}</span>
+            <span className="font-bebas text-2xl font-bold tracking-[0.2em] text-white">CONTACTO</span>
           </div>
 
           {/* Corner accents */}
@@ -116,30 +116,35 @@ const ContactForm = () => {
             <div className="relative z-10 mt-6">
               <div className="flex items-center gap-3 mb-6">
                 <ShieldAlert className="text-hot-pink animate-pulse" size={40} />
-                <h2 className="font-bebas text-6xl text-white tracking-tight">VINCULAR <span className="text-hot-pink italic underline decoration-electric-cyan/50">MENTE</span></h2>
+                <h2 className="font-bebas text-6xl text-white tracking-tight">AREA <span className="text-hot-pink italic underline decoration-electric-cyan/50">CONTACTO</span></h2>
               </div>
               
               <p className="font-jetbrains text-sm text-paper/50 mb-12 max-w-md border-l-2 border-hot-pink pl-4">
-                [SYSTEM]: Esperando entrada de datos para la transmutación visual. El ruido será dominado.
+                [SISTEMA]: Cuéntanos tu proyecto. Recibirás una respuesta profesional en menos de 24 horas.
               </p>
 
-              <form className="grid grid-cols-1 md:grid-cols-2 gap-8" onSubmit={(e) => e.preventDefault()}>
+              <form 
+                action="https://formspree.io/f/xvgzlowz" 
+                method="POST"
+                className="grid grid-cols-1 md:grid-cols-2 gap-8"
+              >
+                <input type="hidden" name="_subject" value="Nuevo Mensaje de Studio Kali" />
                 <div className="space-y-3">
-                  <label className="font-jetbrains text-[10px] uppercase tracking-tighter text-electric-cyan/70">IDENTIFICADOR_SUJETO</label>
-                  <input type="text" className="w-full bg-noir border-b-2 border-hot-pink/20 p-4 text-paper focus:border-hot-pink outline-none transition-all placeholder:text-paper/10 font-jetbrains text-sm" placeholder="NOMBRE / ALIAS" />
+                  <label className="font-jetbrains text-[10px] uppercase tracking-tighter text-electric-cyan/70">TU_NOMBRE</label>
+                  <input type="text" name="name" required className="w-full bg-noir border-b-2 border-hot-pink/20 p-4 text-paper focus:border-hot-pink outline-none transition-all placeholder:text-paper/10 font-jetbrains text-sm" placeholder="NOMBRE COMPLETO" />
                 </div>
                 <div className="space-y-3">
-                  <label className="font-jetbrains text-[10px] uppercase tracking-tighter text-electric-cyan/70">CANAL_RETORNO</label>
-                  <input type="email" className="w-full bg-noir border-b-2 border-hot-pink/20 p-4 text-paper focus:border-hot-pink outline-none transition-all placeholder:text-paper/10 font-jetbrains text-sm" placeholder="EMAIL_PROTOCOLO" />
+                  <label className="font-jetbrains text-[10px] uppercase tracking-tighter text-electric-cyan/70">TU_EMAIL</label>
+                  <input type="email" name="email" required className="w-full bg-noir border-b-2 border-hot-pink/20 p-4 text-paper focus:border-hot-pink outline-none transition-all placeholder:text-paper/10 font-jetbrains text-sm" placeholder="EMAIL DE CONTACTO" />
                 </div>
                 <div className="md:col-span-2 space-y-3">
-                  <label className="font-jetbrains text-[10px] uppercase tracking-tighter text-electric-cyan/70">ESTRUCTURA_PROYECTO</label>
-                  <textarea rows={4} className="w-full bg-noir border-l-2 border-hot-pink/20 p-6 text-paper focus:border-hot-pink outline-none transition-all resize-none placeholder:text-paper/10 font-jetbrains text-sm" placeholder="DESCRIBE LA VISIÓN..."></textarea>
+                  <label className="font-jetbrains text-[10px] uppercase tracking-tighter text-electric-cyan/70">MENSAJE</label>
+                  <textarea name="message" rows={4} className="w-full bg-noir border-l-2 border-hot-pink/20 p-6 text-paper focus:border-hot-pink outline-none transition-all resize-none placeholder:text-paper/10 font-jetbrains text-sm" placeholder="¿EN QUÉ PODEMOS AYUDARTE?"></textarea>
                 </div>
 
                 <button className="md:col-span-2 group/btn relative overflow-hidden py-6 bg-hot-pink text-white font-bebas text-3xl tracking-[0.3em] transition-all hover:scale-[1.02] active:scale-95 shadow-[0_10px_30px_rgba(255,45,120,0.4)]">
                   <span className="relative z-10 flex items-center justify-center gap-4">
-                    EJECUTAR CONEXIÓN
+                    CONTACTO
                     <Send size={24} className="group-hover/btn:translate-x-2 group-hover/btn:-translate-y-2 transition-transform" />
                   </span>
                   {/* Button Background Animation */}

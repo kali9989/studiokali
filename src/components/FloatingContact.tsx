@@ -30,7 +30,7 @@ const FloatingContact = () => {
 
             {/* Premium Label */}
             <div className="absolute left-20 bg-charcoal border border-electric-cyan/30 px-4 py-1 rounded-none opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap">
-                <span className="font-jetbrains text-[10px] text-electric-cyan tracking-widest uppercase">[LINK_DATA_NEURAL]</span>
+                <span className="font-jetbrains text-[10px] text-electric-cyan tracking-widest uppercase">Hablemos por WhatsApp</span>
             </div>
         </a>
     );
