@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useMemo } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { X, Send, Cpu, Terminal, ShieldAlert } from 'lucide-react';
 
