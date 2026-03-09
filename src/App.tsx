@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Navbar from './components/Navbar';
 import './App.css'
 
@@ -43,6 +44,7 @@ function App() {
           <Footer />
         </Suspense>
       </main>
+      <SpeedInsights />
     </div>
   )
 }
