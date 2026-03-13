@@ -42,8 +42,8 @@ export default function SocialCounters() {
         );
     }, { scope: sectionRef });
 
-    const BASE_IG = 9940;
-    const BASE_TK = 18500;
+    const BASE_IG = 18500;
+    const BASE_TK = 10000;
 
     return (
         <div ref={sectionRef} className="w-full max-w-4xl mx-auto mb-16 px-4">
