@@ -42,12 +42,13 @@ export default function SocialCounters() {
         );
     }, { scope: sectionRef });
 
-    const BASE_IG = 18500;
-    const BASE_TK = 10000;
+    const BASE_IG = 18507;
+    const BASE_TK = 10007;
 
     return (
         <div ref={sectionRef} className="w-full max-w-4xl mx-auto mb-16 px-4">
             <div className="text-center mb-10">
+                {/* Deployment Marker: v1.0.1 */}
                 <div className="inline-flex items-center gap-2 mb-3">
                     <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.8)]" />
                     <p className="font-jetbrains text-green-400/80 text-[10px] uppercase tracking-[0.5em] font-bold">LIVE</p>
