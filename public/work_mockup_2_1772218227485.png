@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://studio-kali.vercel.app/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Studio Kali" />
+    <meta name="generator" content="Vite + React" />
+
+    <title>Studio Kali | Diseño Digital de Vanguardia | Branding & Web</title>
+    <meta
+      name="description"
+      content="Studio Kali: Transmutamos ideas en impacto visual. Branding express, diseño web premium y gestión de redes sociales a precios económicos. Tú solo preocúpate de tu negocio."
+    />
+    <meta
+      name="keywords"
+      content="branding express, diseño web, studio kali, radiokalifa, precios económicos, identidad visual, redes sociales, diseño gráfico, agencia digital"
+    />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://studio-kali.vercel.app/" />
+    <meta property="og:site_name" content="Studio Kali" />
+    <meta
+      property="og:title"
+      content="Studio Kali | Diseño Digital de Vanguardia"
+    />
+    <meta
+      property="og:description"
+      content="Transmutamos ideas en impacto visual. Branding express y diseño web premium a precios económicos."
+    />
+    <meta
+      property="og:image"
+      content="https://studio-kali.vercel.app/hero_branded_visual_1772218202068.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@radiokalifa" />
+    <meta name="twitter:creator" content="@radiokalifa" />
+    <meta
+      name="twitter:title"
+      content="Studio Kali | Diseño que domina el ruido"
+    />
+    <meta
+      name="twitter:description"
+      content="Branding express y diseño web de vanguardia. Transmutamos ideas en impacto visual."
+    />
+    <meta
+      name="twitter:image"
+      content="https://studio-kali.vercel.app/hero_branded_visual_1772218202068.png"
+    />
+
+    <!-- Schema.org JSON-LD — Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Studio Kali",
+        "url": "https://studio-kali.vercel.app",
+        "logo": "https://studio-kali.vercel.app/hero_branded_visual_1772218202068.png",
+        "description": "Branding express, diseño web premium y gestión de redes sociales a precios económicos.",
+        "sameAs": [
+          "https://www.instagram.com/radiokalifa/",
+          "https://www.tiktok.com/@radiokalifa",
+          "https://www.youtube.com/@radiokalifa"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "cristianrafaelfdz@gmail.com",
+          "contactType": "customer service",
+          "availableLanguage": ["Spanish", "English"]
+        }
+      }
+    </script>
+
+    <!-- Schema.org JSON-LD — WebSite (for sitelinks search box) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Studio Kali",
+        "url": "https://studio-kali.vercel.app",
+        "description": "Agencia de diseño digital de vanguardia"
+      }
+    </script>
+
+    <!-- Schema.org JSON-LD — Service -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Diseño Web y Branding",
+        "provider": {
+          "@type": "Organization",
+          "name": "Studio Kali",
+          "url": "https://studio-kali.vercel.app"
+        },
+        "areaServed": "ES",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Diseño",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Branding Express"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Diseño Web Premium"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Gestión de Redes Sociales"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-CsJXi_YX.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-kvcjSRMh.css">
+  </head>
+  <body>
+    <!-- Noscript fallback for SEO and accessibility -->
+    <noscript>
+      <div style="padding: 2em; text-align: center; background: #0a0a0a; color: #f0ede5;">
+        <h1>Studio Kali — Diseño Digital de Vanguardia</h1>
+        <p>Para la mejor experiencia, activa JavaScript en tu navegador.</p>
+        <p>Contacto: <a href="mailto:cristianrafaelfdz@gmail.com" style="color:#ff2d78;">cristianrafaelfdz@gmail.com</a></p>
+      </div>
+    </noscript>
+    <div id="root"></div>
+  </body>
+</html>
